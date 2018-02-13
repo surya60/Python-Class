@@ -1,4 +1,4 @@
-A=eval(input("Enter the number  seperated by comma : ")
+A=[5,6,3,1,8,7,2,4]
 sorted = False
 while True != sorted:
   sorted=True
