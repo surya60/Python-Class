@@ -1,0 +1,12 @@
+A=eval(input("Enter the number  seperated by comma : ")
+sorted = False
+while True != sorted:
+  sorted=True
+  for i in range(len(A)-1):
+    if A[i]>A[i+1]:
+     temp= A[i]
+     A[i]=A[i+1]
+     A[i+1]=temp
+     sorted=False
+print(A)  
+ 
