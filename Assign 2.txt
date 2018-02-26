@@ -1,0 +1,346 @@
+-----------------------------Assignment 2-----------------------------------
+EXERCISE 2.01
+
+
+
+1.)12
+
+3.)0.125
+
+5.)8
+
+7.)2
+
+9.)1
+
+11.)1
+
+13.)invalid name
+
+15.)valid
+
+17.)Invalid
+
+19.)10
+
+21.)8
+
+23.)9
+
+25.)12.5
+
+27.)Syntax Error
+
+29.)Syntax Error
+
+68.)
+purchasePrice = 10
+sellingPrice=15
+percentProfit= 100*(sellingPrice-purchasePrice)
+print(percentProfit)
+
+
+
+69.)
+
+productionrate=18
+area=30
+totalproduction=productionrate*area
+print(totalproduction)
+
+72.)
+
+initailreading=23352
+finalreading=23695
+totalkmstravelled=finalreading-initailreading
+fuelfilled=14
+mileage=totalkmstravelled/fuelfilled
+print(mileage)
+
+OUTPUT=24.5
+
+
+
+73.)
+
+waterperperson=1600
+currentpopulation=315
+totalwater=waterperperson*currentpopulation
+print(totalwater)
+
+OUTPUT:50400
+
+
+77.)
+usdebt=1.68*(10**13)
+population=3.1588*(10**8)
+percapitadebt=usdebt/population
+print(round(percapitadebt))
+
+OUTPUT:53185
+
+78.)
+
+caloriespercfeet=48600
+totalcalories=5280*caloriespercfeet
+print(totalcalories)
+
+OUTPUT:256608000
+
+
+
+
+
+EXERCISE 2.2
+
+
+
+
+
+47.)
+
+12
+
+MUNICIPALITY
+
+city
+
+6
+
+49.)flute
+
+51.)Your  age is 21.
+
+53.)A ROSE IS A ROSE IS A ROSE
+
+55.)WALLAWALLA
+
+57.)goodbye
+
+59.)Mmmmmmm.
+
+61.)a     b
+
+63.)76 trombones
+
+65.) 17
+
+67.)8.0
+
+69)The Great 9
+
+71.)-1
+
+73.)-8
+
+
+77.)TRUE
+
+79.)First line the variable  assigned should be string not int.
+
+81.)cant have varalbe name  as "for".
+
+83.)Syntax error bcause single quote in single quote
+
+85.)Indentation error
+
+87.)variable should be string not intger.
+
+89.)nnot  use  the function on can interger it only return on a character.
+
+91.)Index out of range
+
+97.)
+n=eval(input("enter number of seconds between lighning and thunder"))
+distance=n/5
+print(round(distance,2))
+
+100.)
+
+wattage=eval(input(" enter wattage of device : "))
+hrs=eval(input(" enter hrs used this month : "))
+cost=round((wattage*hrs)/11.76,2)
+print("The cost of the usage  of the device is $" + str(cost))
+
+102.)
+price=eval(input("enter price of one share of stock(in dollars): "))
+earning=eval(input("enterearning per on share of stock(in dollars) : "))
+ratio=round((price/earning),2)
+print("The companys earning to price ratio is $" +str(ratio))
+
+107.)
+
+bracket=eval(input(" Enter  tax bracket (as decimal): "))
+interestrate=eval(input("Enter munciple bond interest rate (as %): "))
+result=round(interestrate/(1-bracket),2)
+print("Equivalent CD interest rate is " + str(result))
+
+
+111.)
+months=input("Enter months(Whole number): "))
+yr=round(months/12,0)
+mnths=months%12
+print(str(months)+ "months is " + str(yr) + "years and " + str(mnths) + "months")
+
+
+
+EXERCISE 2.3
+
+
+
+
+31.)
+Language  Native speakers  % of World Pop.
+
+Mandarin    935,000,000       14.10%
+
+Spanish     387,000,000        5.85%
+
+English     365,000,000        5.52%
+
+
+33.)Be yourself - everyone else is taken.
+
+35.)Always look on the bright side of life.
+
+37.)The product of 3 and 4 is 12.
+
+39.)The square root of 2 is about 1.4142.
+
+41.)In a randomly selected group of 23 people, the probability
+is 0.51 that 2 people have the same birthday.
+
+43.)You miss 100% of the shots you never take. - Wayne Gretsky
+
+45.)22.28% of the UN nations are in Europe.
+
+47.)abracadabra
+
+49.)Be kind whenever possible. It is always possible. - Dalai Lama
+
+51.)Yes, they produce the same output
+
+53.)
+bill=eval(input("Ener amont of bill : "))
+tippercent=eval(input("Enter  percentage tip : "))
+float tipamount=(tippercent/100)*bill
+print("Tip : ", tipamount)
+
+55.)
+salary=eval(input("Enter the salary : " ))
+salr=salary + (0.1*salary) #adding 10% raise to salary
+afterpaycut=salr - (0.1*salr) # decuctiong 10% 
+change=(afterpaycut-salary)/salary*100
+print("The Percent change  in salary is {0:.2f}%".format(change))
+
+57.)
+
+principle=eval(input("Enter the Principle: "))
+interest=eval(input("Enter the interest rate: "))
+year=eval(input("Enter number of years: "))
+futurevalue=round(principle*(1+interest/100)**year,2)
+print("Future value: $",futurevalue)
+
+58.)
+
+futurevalue=eval(input("Enter Future value: "))
+interest=eval(input("Enter interest rate : "))
+years=eval(input("Enter number of Years : "))
+print("Present value: $",round(futurevalue/(1+interest/100)*n,2))
+
+
+
+
+EXERCISE 2.4
+
+
+43.)['Delaware', 'Commonwealth of Pennsylvania', 'New Jersey']
+
+45.)['New', 'Mexico']
+['New', 'Jersey']
+
+47.)Commonwealth of Pennsylvania,New Jersey,Georgia
+
+49.)93
+
+51.)100
+
+53.)0
+
+55.)8
+
+57.)16
+
+59.)This sentence contains six different words.
+
+61.)["Charles", "Babbage"]
+
+63.) name = input("Surya Teja Reddy ")
+L = name.split()
+print("Middle Name:", L[1])
+
+65.)Teja(Name entered was Surya  Teja Reddy)
+
+67.)editor-in-chief
+
+69.)e**pluribus**unum
+
+71.)['New York', 'NY', 'Empire State', 'Albany']
+
+73.)['France', 'England', 'Spain']
+
+75)gram mer pro
+
+77.)Follow your own star
+
+79.)987-654-3219
+
+81.)nums = (3, 9, 6)
+print(list(nums))
+
+83.)[3, 9, 6]
+
+85.)['soprano', 'tenor', 'alto', 'bass']
+
+87.)['gold', 'silver', 'bronze', 'silver', 'bronze']
+
+89.)murmur
+
+91.)('Happy', 'Sneezy', 'Bashful')
+
+93.)1
+
+95.)out of bounds of list index
+
+97.)cant join string to intergers
+
+99.)Tuples are immutable objects
+
+
+101.)
+list =input("Enter your sentence: ")
+words = list.split()
+wordcount = len(words)
+print ("The word count is:", wordcount)
+
+102.)
+str= " How are you"
+listot = str.split()  
+listot[0][0], listot[-1][-1]
+
+
+103.)
+str=input("Enter a two part name: ")
+strlist=str.split()
+print("Revised name is: ")
+strlist[-1],strlist[0]
+
+
+
+
+
+
+
+
+
+
