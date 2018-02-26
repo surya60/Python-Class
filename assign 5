@@ -72,15 +72,15 @@ amount = 0
 i = 0
 j = 0
 while i < 32 :
-    amount = principal*(1 + rate)
+    amount = (principal*(1 + rate))
     principal = amount + 5000
     i +=1
 
 while j < 14 :
-    amt= deposit*(1 + rate)
+    amt= (deposit*(1 + rate))
     deposit = amt + 5000
     j +=1
-total = deposit *((1+rate)**33)
+total = (deposit *((1+rate)**33))
 print  ("              AMOUNTS DEPOSITED           ")
 print ("\n Earl: ${0:.2f}".format(5000*15),"        Larry: ${0:.2f}".format(5000*33))
 print ("\n        AMOUNTS IN IRA UPON RETIREMENT       ")
