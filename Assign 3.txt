@@ -1,0 +1,79 @@
+1.)
+
+ammount=eval(input("Enter the ammount: "))
+quaters=int(ammount/25)
+remain=amount%25
+dime=int(remain/10)
+remain=remain%10
+nickle=int(remain/5)
+remain=remain/%5
+penny=int(remain)
+print("quaters:{0:}\ndime:{1:}\nnickel:{2:}
+\npenny:{3:}".format(quaters,dime,nickel,penny))
+
+2.)
+
+amount=eval(input("Enter amount of loan:"))
+rate=eval(input("Enter interest rate: "))
+year=eval(input("Enter number of years: "))
+i=rate/1200
+payment=(i/(1-(1/(1+i)**(12*year))))*amount
+print("Monthly payment$: {0:,.2f}".format(payment))
+
+3.)
+
+facevalue=eval(input("Enter face value of the bond: "))
+rate=eval(input("Enter Interest rate: "))
+marketprice=(eval(input("Enter the current market price: "))
+year=eval(input("Enter the years untill maturity: ")
+intr=facevalue*rate
+a=(facevalue-marketprice)/year
+b=(facevalue+marketprice)/2
+bond=(intr+a)/b
+print("Approximate YTM:{0:.2%}".format(bond))
+
+
+4.)
+
+price=eval(input("Enter price of item: "))
+print("Enter Weight of the item in \n pounds and ounces seperately)
+pounds=eval(input("Enter pounds: "))
+ounces=eval(input("Enter ounces: "))
+totalounces=(pounds*16)+ounces
+priceperounce=price/totalounces
+print("Price per ounces: ${0:.2f}".format(priceperounce))
+
+5.)
+
+x1=eval(input("Enter amount invested in  SPY: "))
+x2=eval(input("Enter amount invested in QQQ: "))
+x3=eval(input("Enter amount invested in EEM: "))
+x4=eval(input("Enter amount invested in VXX: "))
+total=x1+x2+x3+x4
+x1p=(x1/(total))
+x2p=(x2/(total))
+x3p=(x3/(total))
+x4p=(x4/(total))
+print("ETF".ljust(4),"PERCENTAGE".center(15))
+print("--------------------------------")
+print("{0:<4s}".format("SPY"),"{0:^15.2%}".format(x1p)
+print("{0:<4s}".format("QQQ"),"{0:^15.2%}".format(x2p)
+print("{0:<4s}".format("EEM"),"{0:^15.2%}".format(x3p)
+print("{0:<4s}".format("VXX"),"{0:^15.2%}".format(x4p)
+print("TOTAL MONEY INVESTED IS : ${0:,.2%}".format(total))
+
+
+6.)
+miles=eval(input("Enter number of miles: "))
+yards=eval(input("Enter number of yards: "))
+feet=eval(input("Enter number of feet: "))
+inches=eval(input("Enter number of inches: "))
+totalinches=(63360 * miles) + (36 * yards) + (12 * feet) + inches
+totalmeters= total inches/39.37
+kilometers=int(meters/1000)
+meters=int(totalmeters- (kilometers*1000))
+print("Metric Length :\n")
+
+print(kilometers, "kilmeters")
+print(meters, "Meters")
+
