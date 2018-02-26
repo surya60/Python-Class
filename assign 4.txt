@@ -1,0 +1,510 @@
+EXERCISE 3.1
+
+2.)C#
+
+4.)B
+
+6.)Spread: 14
+
+8.)d
+
+10.)False
+
+12.)False
+
+14.)False
+
+16.)True
+
+18.)False
+
+20.)True
+
+22.)True
+
+24.)True
+
+26.)True
+
+28.)True
+
+30.)True
+
+32.)False
+
+34.)False
+
+36.)True
+
+38.)False
+
+40.)False
+
+42.)False
+
+44.)True
+
+46.)
+False
+False
+
+######TOOK c=4 AND d=5 and e=6
+
+48.)
+TRUE
+TRUE
+
+50.)
+False
+False
+
+52.)
+
+TRUE
+TRUE
+
+#######str1="Surya"
+54.)
+False
+False
+
+
+56.)not((a == b) or (a == d))
+
+58.)not((a == b) or (a > b))
+
+60.)(a = "") and not(a < b) and not(len(a) < 5)
+
+62.)name in ["Athos", "Porthos", Aramis"]
+
+64.)n in [1,2,3,4,5,6]
+
+66.)1<n<=22
+
+68.)100=<n<=200
+
+70.)False
+
+72.)True
+
+74.)True
+
+76.)True
+
+78.)False
+
+80.)False 
+ 
+82.)False input ye
+
+84.)False
+
+
+EXERCISE 3.2
+
+2.)Student
+
+4.)True
+
+6.)Your change contains 3 dollars.
+
+8.)Cost of cloth is $15.50.
+
+10.)A is a vowel.
+
+12.)Positive
+
+14.)An empty string is false.
+
+16.)No
+
+18)Syntax error , it should have been a==b intead of a=b
+
+20.)eleven
+
+22.)input:yes
+output:correct
+
+24)input: 500
+output:Nope
+The statue is 151 feet tall from base to torch.
+
+26.)quantity=eval(input("Enter the Number of Bagels: ")
+if (quantity>=6):
+ cost=.60*quantity
+else:
+ cost=.60*quantity
+print("The cost of the bagels is ${0:.2f}".format(cost))
+
+28.)
+quantity=eval(input("Enter the number of copies:"))
+if (quantity<100):
+ cost=.5*quantity
+else:
+ cost=(.05*100)+(.03*(quantity-100))
+print("Cost is ${0:.2f}".format(cost))
+
+30.)
+wage=eval(input("Enter hourly wages: "))
+hours=eval(input("Enter number of hours: "))
+if (hours>40):
+ pay=(40*wage)+(1.5*wage*(hours-40))
+else:
+ pay=wages*hours
+print("Gross pay for the week is ${0:.2f}".format(pay))
+
+32.)
+isvowel=false
+word=eval(input("Enter word in lowercase:")
+if (word[0] in "aeiou")):
+if is vowel:
+ print("The word in Pig latin is",word+way)	
+else:
+ print("The word in nPig latin is",woed=kay)
+
+
+
+
+34.)
+
+balance=eval(input("Enter the balace: "))
+withdrawal=eval(input("Enter amount of withdrawal:"))
+if (withdrawal>balance):
+ print("Withdrawal denied")
+if(balance<150):
+ print("The new balance is below 150")
+ print("The new balane is ${0:.2f}".format(balance-withdrawal))
+else:
+ print("The balance is ${0:.2f}".format(balance-withdrawal))
+
+36.)
+year=eval(input("Enter the year:"))
+ys=str(year)
+if (year%4==0) and (ys[-1]!=0) and (ys[-2]!=0)
+ print(year, "is a leap year)
+else:
+ print(year, is not a leap year)
+
+
+38.)
+
+print("The four railroad properties are Reading, Pennsylvania, B & O, and Short Line.")
+question = input("Which is not a railroad?")
+if ques == "Short Line:
+    print ("Correct.")
+    print ("Short Line is a bus company.")
+else:
+    print ("Short Line is a bus company.")
+
+40.)gpa = eval(input("Enter your gpa: "))
+if gpa >= 3.9:
+ honors = " summa cum laude."
+elif gpa >= 3.6:
+ honors = " magna cum laude."
+elif gpa >= 3.3:
+ honors = " cum laude."
+else:
+ honors = "."
+print("You graduated" + honors)
+
+42.)
+
+suit_ = eval(input("Enter cost of first suit: "))
+suit2 = eval(input("Enter cost of second suit: "))
+total_cost = (suit1 + ((suit2)/2))
+print ("Cost of the two suits is ${0:.2f}",.format(total_cost))
+
+
+
+
+
+
+Exercise 3.3
+
+
+2.)18
+
+4.)10
+
+6.)Atlantic, Pacific, Antarctic
+
+8.)Try #1: In what year did the Beatles invade the U.S.?  1950
+Later than 1950
+Try #2: In what year did the Beatles invade the U.S.?  1974
+Earlier than 1974
+Try #3: In what year did the Beatles invade the U.S.?  1960
+Later than 1960
+
+10.)
+num = 1
+
+while (num<6):
+
+  print(num)
+ 
+  num += 1
+
+12.)
+list1 = ['a', 'b', 'c', 'd']
+
+i=0
+
+while (i < len(list1)):
+ 
+ print(list1[i])
+
+ i = i + 1
+
+14.)L = [2, 4, 6, 8]
+
+total = 0
+
+i=0
+
+while (i<len(L)):
+
+ total += L[i]
+
+ i=i+1
+
+print(total)
+
+18.)
+
+N=eval(input("Enter the number greater than 1:"))
+
+F=2
+
+while(N>1):
+
+ if (N%F==0):
+ 
+  print(F)
+  
+  N=N/F
+ else:
+ 
+ else: 
+  F=F+1
+
+
+20.)
+pop=7000000000
+year=2007
+While(pop<=8000000000)
+ year=year+1
+ pop=pop+((1.1/100)*pop)
+print(year,"is the year when the ppopolation wil reach 8 billon)
+
+
+22.)yr = 0
+cpi = 238.25
+rate = 0.025
+while cpi <= 476.5:
+    cpi = cpi + (cpi * rate)
+    yr = yr + 1
+print ("Consumer prices will double in %d years" %yr)
+
+########EXERCISE 3.4##################
+
+2.)-11,-10,-9,-8
+
+4.)2010, 2015, 2020, 2025
+
+6.)1
+
+8.)12,7
+
+10.)range(1,4)
+
+12.)range(-1:0)
+
+14.)range(7)
+
+16.)range(-5,0)
+
+18.)
+6
+8
+10
+12
+
+20.)
+-9
+-6
+-3
+
+22.)6
+
+24.)
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+26.)3
+
+28.)code
+
+30.)P
+
+32.)13
+
+34.)1
+
+36.)
+
+Leaf 1: sunshine
+Leaf 1: rain
+Leaf 1: the roses that bloom in the lane
+Leaf 1: somebody I adore
+
+38.)30
+
+40.)line
+
+44.)Corrected:
+for i in range(1, 4):
+
+ print(i, " " ,2 ** i)
+[error was that we were adding string to the interger in output]
+
+46.)
+list1 = ["one", "two", "three", "four"]
+
+for item in list1:
+ 
+ item = item.upper()
+
+ print(item)
+[Should have printed item ,that too inside the loop]
+
+
+48.)
+for i in range(1,5):
+ print("Hello")
+
+50.)
+
+lakes = ["Erie", "Huron", "Michigan", "Ontario", "Superior"]
+
+for i in range(len(lakes)):
+ 
+ print(lakes[i], end="")
+
+
+52.)
+
+numb=eval(input("Enter the phone  number with dashes: "))
+for i in len(numb)
+ if i in '-'
+  numb.replace(i,'')
+print(numb)
+
+54.)
+
+first=eval(input("Enter the first number"))
+second=eval(input("Enter second number: "))
+third=eval(input("Enter third number: "))
+if (first>second):
+ if (first>third):
+  max=first
+ else:
+  max=third
+else:
+ if(second>first):
+   if(second>third):
+    max=second
+   else:
+    max=third
+print(max)
+
+56.)
+
+sum=0
+
+for i in range(1,101):
+ 
+ sum=sum+i
+
+print(sum)
+
+
+
+58.)
+
+word=str(input("Enter the word:"))
+count=0
+for i in range(len(word)):
+ if word[i] in 'aeiou':
+  count+=count
+if count = len(word):
+ print("Entered word is vowel word")
+else:
+ print("not a vowel word")
+
+60.)
+compount=1000
+simple=100
+count=0
+while (count<4):
+ simple = 1000+50
+ compound=copound+(0.05*compound)
+ count=count+1
+print("Simple Interest is{0:.2f}".format(simple))
+print("compound Interest is{0:.2f}".format(compound))
+
+64.)
+
+first=eval(input("Enter the first grade:"))
+second=eval(input("Enter the  second grade:"))
+third=eval(input("Enter the third grade:"))
+list=[first,second,third]
+list.sort()
+average=round(((list[1]+list[-1])/2),2)
+print(average)
+
+68.)
+salary = 20000
+option1 = 0
+ option1 += salary
+ salary += 1000
+print("Option 1 earns ${0:,d}.".format(option1))
+salary = 10000
+option2 = 0
+for i in range(20):
+ option2 += salary
+ salary += 250
+print("Option 2 earns ${0:,d}.".format(option2))
+
+70.)
+
+infile = open("Final.txt", 'r')
+grades = [line.rstrip() for line in infile]
+infile.close()
+for i in range(len(grades)):
+ grades[i] = int(grades[i])
+average = sum(grades) / len(grades)
+num = 0 # number of grades above average
+for grade in grades:
+ if grade > average:
+num += 1
+print("Number of grades:", len(grades))
+print("Average grade:", average)
+print("Percentage of grades above average: {0:.2f}%"
+.format(100 * num / len(grades)))
+
+
+ 
+
+
+
+
+
+
