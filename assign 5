@@ -23,6 +23,45 @@ elif (condition == 0):
 else:
   print("\n The equation has no roots.")
 
+3.)
 
+caffeine_intake = 130
+hours = 0
+while caffeine_intake >=65:
+   caffeine_intake = caffeine_intake - (0.13*caffeine_intake)
+   hours  = hours  + 1
+print("CAFFINE VALUES")
+print("One cup: less than 65 mg will remain after " + str(hours )+ " hours.")
 
-3.
+caffeine_intake = 130
+number_hours  = 24
+while hours  > 0:
+  caffeine_intake = caffeine_intake - (0.13*caffeine_intake)
+  hours  = hours  - 1
+ 
+print("One cup: {0:.2f} mg. will remain after 24 hours.".format(caffeine_intake))
+
+result = 0
+caffeine_intake_24 = 130
+hours  = 25 #total 25 cups of coffee
+while hours >0:
+  hours  = hours  - 1
+  result  = caffeine_intake_24 + result  - 0.13*result 
+
+print("Hourly cups:  {0:.2f} mg. will remain after 24 hours.".format(result))
+
+4.)
+
+import math
+print("{0:<15s}{1:<15s}{2:>15s}".format("Interest Rate ","Doubling Time(years)","Actual doubling"))
+rate = 1
+while (rate <= 20):
+    
+    number_years = round(math.ceil(math.log(2.0) / math.log((1.0 + (rate / 100.0)))))
+    yest_years = round(72.0 / rate, 0) #Estimated doubling time
+    print("{0:<15n}{1:<15n}{2:^15n}".format(rate ,yest_years,number_years))
+    rate += 1
+    
+    
+5.)    
+    
