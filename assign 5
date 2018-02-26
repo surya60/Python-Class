@@ -1,0 +1,28 @@
+###############Assignment 5######################################
+
+
+2.)
+
+from math import sqrt
+
+a = float(input("Enter  a:"))
+b = float(input("Enter  b:"))
+c = float(input("Enter  c:"))
+
+condition = b**2 - 4*a*c
+
+if (condition > 0):
+ number_roots = 2
+ root1 = (((-b) + sqrt(condition))/(2*a))
+ root2 = (((-b) - sqrt(condition))/(2*a))
+ print(" The roots are {0:.1f} and {1:.1f}".format(root1,root2))
+elif (condition == 0):
+ number_roots = 1
+ root1 = round((-b) / 2*a ,2)
+ print(" the roots are {0:d}".formaat(root1))
+else:
+  print("\n The equation has no roots.")
+
+
+
+3.
