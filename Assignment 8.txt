@@ -1,0 +1,85 @@
+###############################Assignment 8################################## >>>Group work by : Jathin Reddy , Praneetha Prakash, Vikas Baig, Surya Teja Reddy
+
+class BankAccount:
+
+
+   # constructor or initializer
+  def __init__(self, name, balance, accountno):
+       self.__name = name
+       self.__balance = balance   # __balance is private now, so it is only accessible inside the class
+       self.__accountno = accountno
+
+
+  def pincheck(self):
+    accountno = input("Enter accountno: ")
+    if accountno == self.__accountno:
+      return True
+    else:
+      print("Error try again")
+
+  
+  def debit(self, balance):
+       self.__balance += balance
+
+  def credit(self, balance):
+       if self.__balance > balance :
+           self.__balance -= balance
+           return balance
+       else:
+           return "Insufficient funds"
+
+  def checkbalance(self):
+       return self.__balance
+
+  def display(self):
+    ''' helper/support method to display account info '''
+    print("Account No:", self.__accountno)
+    print("Customer Name:", self.__name)
+    print("balance: ${0:.2f}".format(self.__balance))
+
+
+def main():
+
+  d1 = 0
+  d2 = 0
+  d3 = 0
+
+  print("Bank account application ")
+  print(" 1) Create new account")
+  print(" 2) Credit/Debit an account")
+  print(" 3) List all account")
+  print(" 4) List account history")
+  print(" 5) Quit")
+
+  inp = input("What would you like to do:")
+
+  if inp is 1:
+      print("Creating a new account...")
+      print("Please enter individuals")
+      fname = input("First Name :")
+      lname = input("Last Name")
+      print(fname.__name(), lname.__name)
+      amount = int(input("Please enter the amount: "))
+
+
+  if inp is 2:
+      print("Crediting/Debiting an account")
+      accountno = int(input("Please enter Account No.: "))
+      amount = int(input("Please enter the amount: "))
+      w1= int(input("How much do you want to credit"))
+      print("credit: ",amount.credit(w1))
+  # if inp is :
+  #   d1= int(input("How much do you want to debit"))   
+  #   amount.debit(d1)   
+  #   print("Current Balance:",amount.checkbalance())
+
+  if inp is 3:
+      print("Transaction history:")
+      return display()
+  if inp is 4:
+      print("List of all account:")
+
+  if inp is 5:
+      exit()
+
+main()

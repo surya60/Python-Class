@@ -1,0 +1,493 @@
+###########################Exercise 5.1###################################################################################################
+
+2.)Hello
+
+4.)Hello
+Aloha
+HelloAloha
+
+6.)
+[1, 3, 4]
+
+8.)
+[0, 1, 4]
+
+10.)
+Never give up.
+
+12.)
+['z', 'o', 'n', 'e']
+
+14.)Syntac should have been outfile=open(ABC.txt,'w')
+
+16.)
+We cannot write a file  which is readable should have outfile=open(ABC.txt, 'w')
+
+18.)There shouls not be the function print(len(outfile))
+
+20.)The file cannot be read since it has been closed
+
+22.)Sets cannot have list 
+
+24.)
+def removeDuplicates(list1):
+set1 = set(list1)
+return list(set1)
+
+26.)
+
+def fndItemsInEither(list1, list2):
+set1 = set(list1).union(list2)
+return list(set1)
+
+30.)
+
+A new  file  is created  with Both the subcribers of New York Times and Wall Street Journal.
+
+32.)
+A new file is created with subceribers Who only Subcribe to the New York Times or Wall Street Journal.
+
+36.)
+def main():
+ min = getMin("Numbers.txt")
+ print("The Smallest number in the \nfile Numbers.txt is",
+ str(min) + ".")
+def getMin(fileName):
+ infile = open("Numbers.txt", 'r')
+ min = int(infile.readline())
+ for line in infile:
+  num = int(line)
+  if num < min:
+   min = num
+ infile.close()
+ return min
+main()
+
+
+38.)
+def main():
+
+ sum = getAvg("Numbers.txt")
+ print("The Average of the numbers in \nthe file Numbers.txt is",
+ str(sum) + ".")
+def getAvg(fileName):
+ infile = open("Numbers.txt", 'r')
+ sum = 0
+ count=0
+ for line in infile:
+  sum += int(line)
+  count+=count
+ infile.close()
+ Avg=sum/count
+ return Avg
+main()
+
+40.)
+
+import os
+infile = open("Month.txt", 'r')
+outfile = open("month1.txt", 'w')
+for month in infile:
+ if 'r' in (month.rstrip()) 
+  outfile.write(Month)
+infile.close()
+outfile.close()
+os.remove("Month.txt")
+os.rename("Month1.txt", "Month.txt")
+
+42.)
+
+def main():
+ lastStates = getListOfLastStates()
+ createFileOfLastStates(lastStates)
+def getListOfLastStates():
+ infile = open("AllStates.txt", 'r')
+ states = {state.rstrip() for state in infile}
+ infile.close()
+ infile = open("FirstStates.txt", 'r')
+ firstStates = {state.rstrip() for state in infile}
+ lastStates = list(states.difference(firstStates))
+ lastStates.sort()
+ return lastStates
+def createFileOfLastStates(lastStates):
+ outfile = open("LastStates.txt", 'w')
+ for state in lastStates:
+  outfile.write(state + "\n")
+ outfile.close()
+main()
+
+44.)
+
+import os
+infile=open("PresStates.txt","r")
+outfile=open("temp.txt","w")
+state_set = {line for line in infile}
+outfile.writelines(state_set)
+count = len(list(state_set))
+print("{0:} different states have produced presidents of the United States.".format(count))
+infile.close()
+outfile.close()
+os.remove("PresStates.txt")
+os.rename("temp.txt","PresStates.txt")
+
+
+46.)
+def main():
+ lastStates = getListOfLastStates()
+ createFileOfLastStates(lastStates)
+def getListOfLastStates():
+ infile = open("AllStates.txt", 'r')
+ states = {state.rstrip() for state in infile}
+ infile.close()
+ infile = open("FirstStates.txt", 'r')
+ firstStates = {state.rstrip() for state in infile}
+ lastStates = list(states.difference(firstStates))
+ lastStates.sort()
+ return lastStates
+def createFileOfLastStates(lastStates):
+ outfile = open("LastStates.txt", 'w')
+ for state in lastStates:
+  outfile.write(state + "\n")
+ outfile.close()
+main()
+
+########################EXERCISE 5.2###########################################################################################################
+
+Ans.
+Afghanistan is in Asia. 
+Albania is in Europe.
+
+4.
+
+Afghanistan's pop. density is 126.30 people per sq. mile. 
+Albania's pop. density is 270.27 people per sq. mile.
+
+6.
+
+Each line of the new file contains the name of a European country and its population in millions. The countries in descending order by population. The first two lines of the file contain the data Algeria,Africa and Angola,Africa.
+
+8.
+
+def main():
+ stockList = placeDataIntoList("DOW.txt")
+ stockList.sort(key=byPercentGrowth)
+ increase = (float(stockList[-1][5]) - float(stockList[-1][4])) / \
+ float(stockList[-1][4])
+ print("Best performing stock: {0:1} {1:0,.2f}%".
+ format(stockList[-1][0], 100 * increase))
+ increase = (float(stockList[0][5]) - float(stockList[0][4])) / \
+ float(stockList[0][4])
+ print("Worst performing stock: {0:1} {1:0,.2f}%".
+ format(stockList[0][0], 100 * increase))
+def placeDataIntoList(fileName):
+ infile = open(fileName, 'r')
+ listOfLines = [line.rstrip() for line in infile]
+ infile.close()
+ for i in range(len(listOfLines)):
+  listOfLines[i] = listOfLines[i].split(',')
+  listOfLines[i][4] = eval(listOfLines[i][4])
+  listOfLines[i][5] = eval(listOfLines[i][5])
+  listOfLines[i][6] = eval(listOfLines[i][6])
+  listOfLines[i][7] = eval(listOfLines[i][7])
+ return listOfLines
+def byPercentGrowth(stock):
+ percentIncrease = (float(stock[5]) - float(stock[4])) / float(stock[4])
+ return percentIncrease
+main()
+
+
+12.
+infile = open("Justices.txt", 'r')
+justices = [line for line in infile if (int(line.split(',')[5]) == 0)]
+justices.sort(key=lambda x: int(x.split(',')[4]))
+print("Current Justices")
+for justice in justices:
+print(justice.split(',')[0], justice.split(',')[1])
+
+14.
+
+def main():
+ state = input("Enter a state abbreviation: ")
+ justices = getJusticesByState(state)
+ fixCurrentJustices(justices)
+ justices.sort(key=lambda justice: justice[5] - justice[4],
+ reverse=True)
+ print("\n{0:18} {1:20} {2}".format("Justice", "Appointing Pres",
+ "Yrs Served"))
+ for justice in justices:
+  print("{0:18} {1:20} {2}".format(justice[0] + " " + justice[1],
+  justice[2].split(" ")[-1], justice[5] - justice[4]))
+  def getJusticesByState(state):
+  infile = open("Justices.txt", 'r')
+  listOfRecords = [line for line in infile if line.split(',')[3] == state]
+  infile.close()
+ for i in range(len(listOfRecords)):
+  listOfRecords[i] = listOfRecords[i].split(',')
+  listOfRecords[i][4] = int(listOfRecords[i][4])
+  listOfRecords[i][5] = int(listOfRecords[i][5])
+ return listOfRecords
+def fixCurrentJustices(justices):
+ for justice in justices:
+  if justice[5] == 0:
+   justice[5] = 2015
+main()
+
+16.
+
+def main():
+ displayNames("Pioneers.txt")
+ print('\n')
+ name = input("Enter the name of a computer pioneer: ")
+ displayAccomplishment("Pioneers.txt", name)
+ def displayNames(fileName):
+ infile = open(fileName, 'r')
+ for line in infile:
+  lineList = line.split(',')
+  print((lineList[0] + '\t').expandtabs(20), end="")
+ infile.close()
+def displayAccomplishment(fileName, name):
+ infile = open(fileName, 'r')
+ for line in infile:
+  lineList = line.split(',')
+  if lineList[0] == name:
+   print(name, lineList[1].rstrip() + '.')
+ infile.close()
+ break
+main()
+
+
+20.
+
+state = input("Enter the name of a state: ")
+infile = open("StatesANC.txt", 'r')
+found = False
+state_data = infile.readline()
+while (found == False) and (state_data != ""):
+data = state_data.split(",")
+if data[0] == state:
+ print("Abbreviation:", data[1])
+ print("Nickname:", data[2])
+ print("Capital:", data[3].rstrip())
+ found = True
+ state_data = infile.readline()
+infile.close()
+
+22.
+
+films = open("Oscars.txt", 'r')
+incorrect = True
+while incorrect:
+year = int(input("Enter a year from 1928-2013: "))
+if (year >= 1928) and (year <= 2013):
+ incorrect = False
+ infile = open("Oscars.txt", 'r')
+ flicks = [film.rstrip() for film in infile]
+ infile.close()
+ film = flicks[year - 1928]
+ data = film.split(',')
+ print("Best File:", data[0])
+ print("Genre:", data[1]
+ films.close()
+else:
+ print("Year must be between 1928 and 2013.\n")
+ incorrect = True
+
+24.
+
+def main():
+   infile = open("Cowboy.txt", 'r')
+   outfile = open("Cowboy2.txt", 'w')
+   for line in infile:
+   data = line.split(',')
+   if data[0] == "Saddle":
+     newPrice = round(0.8 * eval(data[1]), 2)
+   outfile.write("Saddle," + str(newPrice) + "\n")
+else:
+   outfile.write(line)
+  outfile.close()
+  infile.close()
+main()
+
+26.
+Ans.def main():
+   outfile = open("Cowboy.txt", 'a')
+   outfile.write("Winchester Rifle,20.50\n")
+   outfile.close()
+main()
+
+
+##################################################EXERCISE 5.3#######################################################################################################################
+
+
+2.
+ 6
+
+4.
+[1.1, 0.6, 1.3, 6.5, 1.5, 3.6]
+
+6.
+ True
+
+8.
+1.1
+
+10.
+ CT
+
+12.
+5
+
+14.
+Output: {}
+
+16.
+ CT MA ME NH RI VT
+
+18.
+0.6
+4.2
+5.3
+6.6
+8.1
+14.6
+
+20.
+6
+
+22.
+755
+
+24.
+[('Aaron', 755), ('Bonds', 762)]
+
+26.
+Bonds
+
+28.
+Output: False
+
+30.
+['Bonds', 'Aaron']
+
+32.
+Output: NA
+
+34.
+{'Aaron': 755, 'Bonds': 762, 'Ruth': 714}
+
+36.
+{'Bonds': 763, 'Aaron': 755}
+
+38.
+Aaron
+Bonds
+
+40.
+Aaron	
+Bonds
+
+42.
+Output: 750
+
+44.
+Output: 755
+
+45.
+ president = input("Who was the youngest U.S. president? ")
+president = president.upper()
+trueResponse = "Correct. He became president at age 42\n" + \
+"when President McKinley was assassinated."
+jfkResponse = "Incorrect. He became president at age 43. However,\n" + \
+"he was the youngest person elected president."
+responses = {}
+responses["THEODORE ROOSEVELT"] = trueResponse
+responses["TEDDY ROOSEVELT"] = trueResponse
+responses["JFK"] = jfkResponse
+responses["JOHN KENNEDY"] = jfkResponse
+responses["JOHN F. KENNEDY"] = jfkResponse
+print(responses.get(president, "Nope."))
+
+47.
+def main():
+    bestHitters = {"Gehrig":{"atBats":8061, "hits":2721},"Ruth":{"atBats":8399, "hits":2873},"Williams":{"atBats":7706, "hits":2654}}
+    BattingAverage(bestHitters)
+def BattingAverage(bestHitters):
+    for hitter in bestHitters:
+        print("{0:10} {1:.3f}".format(hitter,bestHitters[hitter]["hits"] / bestHitters[hitter]["atBats"]))
+main()
+
+49.
+Code: def main():
+    bestHitters = {"Gehrig":{"atBats":8061, "hits":2721},"Ruth":{"atBats":8399, "hits":2873},"Williams":{"atBats":7706, "hits":2654}}
+    displayAverageNumberOfHits(bestHitters)
+def displayAverageNumberOfHits(bestHitters):
+    hittingList = []
+    for hitter in bestHitters:
+        hittingList.append(bestHitters[hitter]["hits"])
+    value = "{0:.1f}".format(sum(hittingList) / len(hittingList))
+    print("The average number of hits by")
+    print("the baseball players was", value + '.')
+main()
+
+
+55.
+Code: def main():
+    enter = input("Enter a sentence: ")
+    enter = enter.upper()
+    letterDict = dict([(chr(n),0) for n in range(65, 91)])
+    for char in enter:
+        if 'A' <= char <= 'Z':
+            letterDict[char] += 1
+    displaySortedResults(letterDict)
+def displaySortedResults(dictionaryName):
+    letterList = list(dictionaryName.items())
+    letterList.sort(key=k, reverse=True)
+    for i in letterList:
+        if i[1] != 0:
+            print(" " + i[0] + ':', i[1])
+def k(x):
+    return x[1]
+main()
+
+57.
+import pickle     
+def main():
+    presidents = getDictionary("USpresStatesDict.dat")
+    states = createStatesDict(presidents)
+    sortedStates = [state for state in states if states[state] > 2]
+    sortedStates.sort(key=lambda state: states[state], reverse=True)
+    print("States that produced three or")
+    print("more presidents as of 2016:")
+    for state in sortedStates:
+        print(" ", state + ":", states[state])
+def getDictionary(fileName):
+    infile = open(fileName, 'rb')
+    dictName = pickle.load(infile)
+    infile.close()
+    return dictName
+def createStatesDict(presidents):
+    states = {}
+    for state in presidents.values():
+        if not states.get(state, False):
+            states[state] = 1
+        else:
+            states[state] += 1
+    return states
+main()
+
+59.
+Code: def main():
+    calenderDictionary = createDictionary("Calendar2015.txt")
+    date = input("Enter a date in 2015: ")
+    print(date, "falls on a", calenderDictionary[date])
+def createDictionary(fileName):
+    infile = open(fileName, 'r')
+    textList = [line.rstrip() for line in infile]
+    infile.close()
+    return dict([x.split(',') for x in textList])
+main()
+ 
+
+
+EXERCISE 5.3 & 5.2:
+Code credits :  Jathin Reddy Gundam  and Praneetha Prakash.

@@ -1,0 +1,114 @@
+##########################ASSIGN 7 #############################################
+
+1.)
+
+def main():
+  height = int(input("Enter the initial height of the ball:"))
+  velocity = int(input("Enter the initial velocity of the ball:"))
+  isvalid(height,velocity)
+
+
+def maxHeight(height,velocity):
+  t = (v/32)
+  Height_1 = (h + (v * t) - (16 * (t * t)))
+  return Height_1
+
+def isValid(height,velocity):
+  if(height <= 0):
+      print("Height should be a positive number.")
+  elif(velocity <= 0):
+     print("Velocity should be a positive number.")
+    else:
+      height = maximumHeight(h,v)
+      print("The maximum height of the ball is", height, " feet.")
+      time = appxTime(h,v)
+      print("the ball will hit the ground after", time, " seconds.")
+
+def appxTime(height,velocity):
+  t = 0.1
+  while(True):
+      height_2 = (height + (velocity * t) - (16 * (t * t)))
+      if(height_2 <= 0):
+          break
+      else:
+          t = (t + 0.1)
+  return t;
+
+main()
+
+
+
+2.))
+
+def largeAndSmallPrimeFactor(number):
+  for i in range(2, number):
+      if number % i == 0:
+          smallestPrimeFactor = i
+          break
+  for i in range(number-1, 1, -1):
+      primeFactor = True
+      if number % i == 0:
+          for j in range(2, i):
+              if i % j == 0:
+                  primeFactor = False
+                  break
+          if primeFactor:
+              largestPrimeFactor = i
+              break
+  return smallestPrimeFactor, largestPrimeFactor              
+
+
+
+3.)
+
+def verbalizeNumber(num):
+ if (len(num) % 3) != 0:
+  num = "0" * (3 - (len(num) % 3)) + num
+
+ maxTerms = len(num)//3
+ terms = ['septillion', 'sextillion', 'quintillion', 'quadrillion', 'trillion', 'billion', 'million', 'thousand', '']
+ for i in range(0, len(num), 3):
+  n = num[i:i+3]
+  print('%3d %s' % (int(n), terms[len(terms) - maxTerms +  (i//3)]))
+
+
+
+
+4.)
+
+
+ def consecutiveLetter(str):
+  x=0
+  flag=0
+  while(x<(len(str)-2)):
+   i=ord(str[x])
+   j=ord(str[x+1])
+   k=ord(str[x+2])
+   if((i+1)==j and (j+1)==k):
+    print("String has 3 consicutive letter")
+    flag=1
+    break
+   else:
+     x=x+1
+  if(flag==0):       
+   print("String has no 3 consicutive letter")))
+
+Code Credits:
+Praneetha Prakash
+Jathin
+github
+stackoverflow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
