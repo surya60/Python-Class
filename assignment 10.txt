@@ -1,0 +1,218 @@
+#####################Assignment 10##########################################################
+
+
+2.)
+
+import math
+def gradecurve(scores, a, b):
+ grades = {'A':0, 'B':0, 'C':0, 'D':0, 'F':0};
+ for gs in scores:
+  if gs >= (a + (1.5*b)):
+   grades['A'] += 1;      
+  elif gs >= (a + (0.5*b)) and ES < (a + (1.5*b)):
+   grades['B'] += 1;          
+  elif gs >= (a - (0.5*b)) and ES < (a + (0.5*b)):
+    grades['C'] += 1;          
+  elif gs >= (a - (1.5*b)) and ES < (a - (0.5*b)):
+    grades['D'] += 1;
+  elif gs < (a - (1.5*b)):
+    grades['F'] += 1;
+ return grades;  
+      
+def calculateMean(scores):
+ return ( sum(scores)/(len(scores) );
+
+def calculateStandardDev(scores, a): 
+ numerator = 0;
+ for score in scores:
+  numerator += ((score - a) * (score - a));
+  b = math.sqrt( (numerator / (len(scores))) );
+ return b;  
+  
+def ReadScores():
+ scores = [];
+ with open("Scores.txt") as fileReader:
+ for line in fileReader:
+  line = line.strip();
+  scores.append(int(line));
+ return scores;
+
+def main():
+   scores = ReadScores();
+   mean = calculateMean(scores); 
+   stdDev = calculateStandardDev(scores, mean);
+   grades = gradeCurve(scores, mean, stdDev);
+   print("\n Number of scores: %d " %(len(scores)));
+   print("\n Average score: %.1f " %(mean));
+   print("\n Standard Deviation of scores: %.1f " %(stdDev));
+   print("\n Grade Distribution after curving the grades. \n");
+   print(grades);
+   print("\n\n");
+main();
+O/P:
+
+
+
+3.)
+
+def read_file(filename):
+ ale_data = []
+ with open(filename, 'r') as f:
+  for line in f:
+   data = line.split(",")
+   percentage = int(data[1]) / (int(data[1]) + int(data[2]))
+   ale_data.append((data[0], int(data[1]), int(data[2]), percentage))
+ return sorted(ale_data, key=lambda x: x[3], reverse=True) 
+
+def write_file(filename, data):
+ with open(filename, 'w') as f:
+  for row in data:
+   f.write("{0:15s}{1:10d}{2:10d}{3:10.3f}\n".format(row[0],row[1],row[2],row[3]))
+
+if __name__ == '__main__':
+ file_data = read_file("ale.txt")
+ write_file("output.txt",file_data)
+
+1.)
+
+print ("Units of Length")
+print ("feets\t inches\t furlongs")
+print ("yards\t fathoms\t feet")
+print ("kilometers\t meters\t miles\t rods")
+
+d1 = {"feet":1,"inches":0.083333,"furlongs":660,"yards":3,"fathoms":6,"feet":1,"kilometers":3281.5,"meters":3.2815,"miles":5280,"rods":16.5}
+unit1 = print ("Enter unit to convert from:")
+unit2 = print ("Enter unit to convert to")
+print ("Enter length in yards", unit1)
+unit2_flt = float()
+if(unit1 in d1):
+ if(unit2 in d1):
+  unit1_to_feet = (dict1[unit1])*unit2_flt
+  feet_to_unit2 = (1/float(dict1[unit2]))*unit1_to_feet
+  print ("Length in ", unit2, feet_to_unit2)
+ else:
+  print ("Invalid Unit")
+else:
+ print ("Invalid Unit")
+
+
+7.)
+
+fname = "cities.txt"                  
+fout = "cities_out.txt"                  
+list1 = []                                       
+with open(fname) as f:                                   
+ lines = [line.rstrip('\n').split(',') for line in f]               
+ for i in range (0, len(lines)):                           
+   increase = float(lines[i][3]) - float(lines[i][2])               
+   increase = increase / float(lines[i][2]) * 100                  
+   list1.append("%.2f,%s,%s" % (float(increase), lines[i][0], lines[i][1]))  
+   list1.sort(reverse=True)                              
+ for line in list1:
+   y = line.strip().split(",")
+   with open(fout,"a") as text_file:
+      text_file.write("%s, %s, %.2f\n" % (y[1],y[2], float(y[0])))
+   text_file.close()
+
+ 
+
+
+
+8.)
+
+f=open('exchangerate.txt')
+country=input('Enter the name of a country: ')
+country=country.lower()
+
+g={}
+
+for line in h:
+    line=line.strip()
+    data=line.split(',')
+    if data[0].lower() not in g:
+        d[data[0].lower()]=[data[1],data[2]]
+if country:
+
+    if country in g:
+        print('Currency: ',d[country][0])
+        print('Exchange rate: ',d[country][1])
+    else:
+        print('Country not found in the list')
+else:
+    print('Enter some country name')
+
+
+
+b. 
+f=open('exchrate.txt')
+g={}
+for line in h:
+ line=line.strip()
+ data=line.split(',')
+ if data[0].lower() not in g:
+   i=float(data[2])
+   d[data[0].lower()]=[data[1],i]
+
+for k in sorted(d.keys(),key=lambda k:d[k][1]):
+ print(k)
+
+
+c.
+f=open('exchrate.txt')
+d={}
+for line in f:
+ line=line.strip()
+ data=line.split(',')
+ if data[0].lower() not in d:
+   i=float(data[2])
+   d[data[0].lower()]=[data[1],i]
+     
+country1=input('Enter name of first country: ')
+country1=country1.lower()
+country2=input('Enter name of second country: ')
+country2=country2.lower()
+amount=int(input('Amount of money to convert: '))
+
+if country1 in d:  
+ if country2 in d:
+  exc=d[country1][1]
+  exc2=d[country2][1]
+  mny=d[country1][0]
+  mny2=d[country2][0]
+  amt=amount * (exc2 /exc)
+  print('%d %s from %s equals %.2f %s from %s' %(amount,mny,country1.capitalize(),amt,mny2,country2.capitalize()))      
+ else:
+  print('%s is not in the list' %country2)
+  print('Try again')      
+else:
+ print('%s is not in the list' %country1)
+ print('Try again')
+
+
+5.)
+
+def main():
+ carlist = {'Prius': (0, 0), 'Camry': (0, 0), 'Sebring': (0, 0), 'Mustang': (0, 0), 'Accord': (0, 0)};
+ with open("Mileage(1).txt") as fileReader:
+      
+  for line in fileReader:
+   ine = line.strip();
+   cols = line.split(',');
+   temp = ();
+   temp = (carlist[cols[0]][0] + 1, cars_list[line.split(',')[0]][1] + float(cols[1]));
+   cars_list[line.split(',')[0]] = temp;
+
+ carMPG = {};
+      
+  for key in carlist.keys():
+    carMPG[key] = 100 / float(cars_list[key][1] / float(cars_list[key][0]));
+  print("\n\n %-10s %-10s \n" %("Model", "MPG"));
+  sorted_keys = sorted(car_MPG, key=carMPG.get, reverse=True)
+  for key in sorted_keys:
+   print(" %-10s %-10.2f \n" %(key, carMPG[key]));
+
+
+
+CODE CREDITS: Praneetha prakash and Jathin Reddy, Stackoverflow.
+
+
